@@ -1,0 +1,24 @@
+{
+  "name": "random-tree-merge",
+  "version": "1.0.0",
+  "description": "Randomly merge trees",
+  "main": "randomTreeMerge.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parenparen/RandomTreeMerge.git"
+  },
+  "keywords": [
+    "random",
+    "tree",
+    "merge"
+  ],
+  "author": "Derek Mueller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/parenparen/RandomTreeMerge/issues"
+  },
+  "homepage": "https://github.com/parenparen/RandomTreeMerge#readme"
+}

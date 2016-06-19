@@ -35,7 +35,7 @@ RandomTreeMerge.Node = Node;
 Walks tree, putting all nodes into an array
 */
 RandomTreeMerge.getAllNodes = function (node, allNodes) {
-    allNodes = typeof allNodes === 'undefined' ? [] : allNodes; 
+    allNodes = typeof allNodes === 'undefined' ? [node] : allNodes; 
     let children = node.getChildren ();
     for (let i in children) {
         if (!(children[i] instanceof Node)) continue;
@@ -49,7 +49,7 @@ RandomTreeMerge.getAllNodes = function (node, allNodes) {
 Constructs random tree from given forest
 */
 RandomTreeMerge.mergeTreesRandomly = function (nodes, constructor) {
-    let randomTree = new constructor;
+    let randomTree;
     let allNodes = [];
 
     // get ramdomly ordered list of all nodes across forest
@@ -70,8 +70,8 @@ RandomTreeMerge.mergeTreesRandomly = function (nodes, constructor) {
         randomTreeNodes.push (nextChild);
 
         // add random node from original forest to random position in in-progress tree
-        if (!randomParentIndex) {
-            randomTree.addChild (nextChild);
+        if (randomTreeNodes.length === 1) {
+            randomTree = nextChild;
         } else {
             randomTreeNodes[randomParentIndex].addChild (nextChild);
         }
