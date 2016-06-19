@@ -2,7 +2,7 @@
   "name": "random-tree-merge",
   "version": "1.0.0",
   "description": "Randomly merge trees",
-  "main": "randomTreeMerge.js",
+  "main": "RandomTreeMerge.js",
   "scripts": {
     "test": "jasmine"
   },
